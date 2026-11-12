@@ -76,7 +76,8 @@ body {
   background-image: radial-gradient(circle, rgba(244, 239, 232, 0.07), transparent 70%);
 }
 
-.dark #services {
+.dark #services,
+.dark #work {
   background-color: #1a1714;
 }
 

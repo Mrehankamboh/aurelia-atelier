@@ -132,6 +132,22 @@ export const projects = [
   },
 ] as const;
 
+export const contact = {
+  eyebrow: "Contact",
+  title: "Write to the studio.",
+  body: "Tell us about the house, the site, and when you hope to begin. If the brief suits the practice, we reply with a time to talk.",
+  visit: "Visits are by appointment, in Lisbon and on the site.",
+  interests: [
+    "Residential architecture",
+    "Interior architecture",
+    "Material and finish",
+    "Renovation and heritage",
+    "Garden rooms",
+    "Furnishing curation",
+    "Not sure yet",
+  ],
+} as const;
+
 export const faqs = [
   {
     question: "How does a project start?",

@@ -13,14 +13,14 @@ const frames = [
 
 export default function Projects() {
   return (
-    <section id="work" className="scroll-mt-28 py-24 md:py-32 lg:py-36">
+    <section id="work" className="scroll-mt-28 bg-[#0e0c0b] py-24 md:py-32 lg:py-36">
       <Container>
         <Reveal className="max-w-3xl">
           <Eyebrow>Selected work</Eyebrow>
-          <h2 className="mt-4 font-display text-4xl leading-[1.02] tracking-[-0.035em] text-ink sm:text-5xl lg:text-6xl">
+          <h2 className="mt-4 font-display text-4xl leading-[1.02] tracking-[-0.035em] text-cream sm:text-5xl lg:text-6xl">
             Our Selected Work
           </h2>
-          <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-ink-soft">
+          <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-footer-muted">
             Four houses from the studio’s recent years. Each one was drawn through to the last sample on site.
           </p>
         </Reveal>

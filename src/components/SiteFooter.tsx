@@ -95,7 +95,7 @@ export default function SiteFooter() {
 
   return (
     <>
-      <div id="contact" ref={spacerRef} className="scroll-mt-28" aria-hidden="true" />
+      <div ref={spacerRef} aria-hidden="true" />
       <footer ref={footerRef} className="footer-reveal bg-footer text-footer-muted">
         <div ref={innerRef}>
           <Container className="py-16 md:py-20 lg:py-24">
