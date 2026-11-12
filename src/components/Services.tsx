@@ -28,7 +28,7 @@ export default function Services() {
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
               <Eyebrow>Services</Eyebrow>
-              <h2 className="mt-3 font-display text-4xl leading-[1.02] tracking-[-0.035em] text-stone-page sm:text-5xl lg:text-6xl">
+              <h2 className="mt-3 font-display text-4xl leading-[1.02] tracking-[-0.035em] text-cream sm:text-5xl lg:text-6xl">
                 The work of a house, kept in one studio.
               </h2>
             </div>

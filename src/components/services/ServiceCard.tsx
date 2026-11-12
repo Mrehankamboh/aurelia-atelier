@@ -21,7 +21,7 @@ function Glow() {
 
 function LearnMore() {
   return (
-    <span className="mt-5 inline-flex w-fit items-center rounded-full border border-white/15 bg-white/8 px-3.5 py-1.5 text-[13px] text-stone-page transition duration-300 group-hover:border-copper group-hover:bg-copper">
+    <span className="mt-5 inline-flex w-fit items-center rounded-full border border-white/15 bg-white/8 px-3.5 py-1.5 text-[13px] text-cream transition duration-300 group-hover:border-copper group-hover:bg-copper group-hover:text-stone-page">
       Learn more
     </span>
   );
@@ -29,7 +29,7 @@ function LearnMore() {
 
 export default function ServiceCard({ title, summary, icon, variant, tall = false }: ServiceCardProps) {
   const shell =
-    "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#161311] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition duration-300 hover:-translate-y-1 hover:border-copper/50 hover:shadow-[0_22px_50px_rgba(0,0,0,0.35)] focus-visible:ring-2 focus-visible:ring-stone-page/80";
+    "group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#161311] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition duration-300 hover:-translate-y-1 hover:border-copper/50 hover:shadow-[0_22px_50px_rgba(0,0,0,0.35)] focus-visible:ring-2 focus-visible:ring-cream/80";
 
   if (variant === "mark") {
     return (
@@ -39,7 +39,7 @@ export default function ServiceCard({ title, summary, icon, variant, tall = fals
           <ServiceArt name={icon} />
         </div>
         <span className="relative px-6 pb-6">
-          <h3 className="font-display text-2xl tracking-[-0.03em] text-stone-page">{title}</h3>
+          <h3 className="font-display text-2xl tracking-[-0.03em] text-cream">{title}</h3>
         </span>
       </a>
     );
@@ -49,7 +49,7 @@ export default function ServiceCard({ title, summary, icon, variant, tall = fals
     return (
       <a href="#contact" className={`${shell} min-h-[230px] p-6 sm:p-7`}>
         <Glow />
-        <h3 className="relative font-display text-2xl tracking-[-0.03em] text-stone-page">{title}</h3>
+        <h3 className="relative font-display text-2xl tracking-[-0.03em] text-cream">{title}</h3>
         <p className="relative mt-2 max-w-xs text-sm leading-relaxed text-footer-muted">{summary}</p>
         <div className="relative mt-auto pt-4">
           <ServiceArt name={icon} />
@@ -62,7 +62,7 @@ export default function ServiceCard({ title, summary, icon, variant, tall = fals
     return (
       <a href="#contact" className={`${shell} min-h-[420px] p-6 sm:p-7`}>
         <Glow />
-        <h3 className="relative font-display text-[1.7rem] tracking-[-0.03em] text-stone-page">{title}</h3>
+        <h3 className="relative font-display text-[1.7rem] tracking-[-0.03em] text-cream">{title}</h3>
         <p className="relative mt-2 max-w-xs text-sm leading-relaxed text-footer-muted">{summary}</p>
         <LearnMore />
         <div className="relative mt-auto pt-8">
@@ -79,7 +79,7 @@ export default function ServiceCard({ title, summary, icon, variant, tall = fals
         <ServiceArt name={icon} />
       </div>
       <div className="relative flex flex-1 flex-col px-6 pt-2 pb-6 sm:px-7 sm:pb-7">
-        <h3 className="font-display text-[1.7rem] leading-tight tracking-[-0.03em] text-stone-page">{title}</h3>
+        <h3 className="font-display text-[1.7rem] leading-tight tracking-[-0.03em] text-cream">{title}</h3>
         <p className="mt-2 max-w-md text-sm leading-relaxed text-footer-muted">{summary}</p>
         <LearnMore />
       </div>

@@ -3,20 +3,46 @@
 :root {
   --background: #f7f3ee;
   --foreground: #1c1917;
+  --stone-page: #f7f3ee;
+  --stone-raised: #efe8df;
+  --stone-line: #ddd4c8;
+  --ink: #1c1917;
+  --ink-soft: #5c564f;
+  --copper: #7c4630;
+  --copper-deep: #5e3424;
+  --footer: #1a1816;
+  --footer-muted: #c9c0b4;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #12100e;
+  --foreground: #f4efe8;
+  --stone-page: #12100e;
+  --stone-raised: #1c1916;
+  --stone-line: #3c342c;
+  --ink: #f4efe8;
+  --ink-soft: #c4bbb0;
+  --copper: #e0b49a;
+  --copper-deep: #c4896a;
+  --footer: #0a0908;
+  --footer-muted: #b7aea3;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-stone-page: #f7f3ee;
-  --color-stone-raised: #efe8df;
-  --color-stone-line: #ddd4c8;
-  --color-ink: #1c1917;
-  --color-ink-soft: #5c564f;
-  --color-copper: #7c4630;
-  --color-copper-deep: #5e3424;
-  --color-footer: #1a1816;
-  --color-footer-muted: #c9c0b4;
+  --color-stone-page: var(--stone-page);
+  --color-stone-raised: var(--stone-raised);
+  --color-stone-line: var(--stone-line);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-copper: var(--copper);
+  --color-copper-deep: var(--copper-deep);
+  --color-footer: var(--footer);
+  --color-footer-muted: var(--footer-muted);
+  --color-cream: #f7f3ee;
   --font-sans: var(--font-outfit);
   --font-display: var(--font-fraunces);
 }
@@ -31,13 +57,27 @@ body {
 }
 
 ::selection {
-  background: #7c4630;
-  color: #f7f3ee;
+  background: var(--copper);
+  color: var(--stone-page);
 }
 
 :focus-visible {
-  outline: 2px solid #1c1917;
+  outline: 2px solid var(--ink);
   outline-offset: 3px;
+}
+
+.dark .hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(244, 239, 232, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(244, 239, 232, 0.07) 1px, transparent 1px);
+}
+
+.dark .hero-orb-b {
+  background-image: radial-gradient(circle, rgba(244, 239, 232, 0.07), transparent 70%);
+}
+
+.dark #services {
+  background-color: #1a1714;
 }
 
 @keyframes rise {

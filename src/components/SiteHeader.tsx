@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { nav, studio } from "@/content/site";
 import Button from "./Button";
 import Container from "./Container";
+import ThemeToggle from "./ThemeToggle";
 
 export default function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -90,12 +91,13 @@ export default function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button href="#contact" size="sm">
-            Book a consultation
-          </Button>
-        </div>
-
+        <div className="flex items-center gap-2 md:gap-3">
+          <ThemeToggle />
+          <div className="hidden md:block">
+            <Button href="#contact" size="sm">
+              Book a consultation
+            </Button>
+          </div>
         <button
           ref={menuButtonRef}
           type="button"
@@ -123,6 +125,7 @@ export default function SiteHeader() {
             />
           </span>
         </button>
+        </div>
       </Container>
       </div>
 

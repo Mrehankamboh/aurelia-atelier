@@ -30,8 +30,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body className="min-h-full bg-background font-sans text-ink">
-        <Script id="js-flag" strategy="beforeInteractive">
-          {`document.documentElement.classList.add("js")`}
+        <Script id="theme-flag" strategy="beforeInteractive">
+          {`document.documentElement.classList.add("js");try{var t=localStorage.getItem("aurelia-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}if(t==="dark")document.documentElement.classList.add("dark");}catch(e){}`}
         </Script>
         {children}
       </body>

@@ -5,7 +5,7 @@ import { footer, services, studio } from "@/content/site";
 import Container from "./Container";
 
 const linkClass =
-  "text-sm text-footer-muted transition duration-300 hover:text-stone-page focus-visible:outline-stone-page";
+  "text-sm text-footer-muted transition duration-300 hover:text-cream focus-visible:outline-cream";
 
 function ColumnTitle({ children }: { children: string }) {
   return (
@@ -103,7 +103,7 @@ export default function SiteFooter() {
           <div className="sm:col-span-2 lg:col-span-4">
             <a
               href="#top"
-              className="font-display text-4xl tracking-[-0.03em] text-stone-page transition duration-300 hover:text-copper"
+              className="font-display text-4xl tracking-[-0.03em] text-cream transition duration-300 hover:text-copper"
             >
               {studio.name}
             </a>
@@ -154,7 +154,7 @@ export default function SiteFooter() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-stone-page transition duration-300 hover:-translate-y-0.5 hover:border-copper hover:bg-copper focus-visible:outline-stone-page"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream transition duration-300 hover:-translate-y-0.5 hover:border-copper hover:bg-copper hover:text-stone-page focus-visible:outline-cream"
                   >
                     <SocialIcon label={item.label} />
                   </a>

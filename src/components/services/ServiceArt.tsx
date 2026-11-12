@@ -63,7 +63,7 @@ function BoardsArt() {
         </svg>
       </div>
       <div className="absolute top-10 right-[8%] w-[28%] rotate-3 rounded-2xl border border-copper/30 bg-[#3a2a22] px-3 py-4 text-center shadow-[0_16px_30px_rgba(124,70,48,0.25)] transition duration-500 group-hover:translate-x-1">
-        <p className="font-display text-2xl text-stone-page">A4</p>
+        <p className="font-display text-2xl text-cream">A4</p>
         <p className="mt-1 text-[10px] tracking-[0.14em] text-white/50 uppercase">Oak</p>
       </div>
     </div>

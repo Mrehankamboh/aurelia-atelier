@@ -24,9 +24,9 @@ export default function ProjectCard({ id, title, category, place, className = ""
             {category}
             <span className="text-white/40"> · {place}</span>
           </p>
-          <h3 className="mt-2 font-display text-3xl tracking-[-0.03em] text-stone-page sm:text-4xl">{title}</h3>
+          <h3 className="mt-2 font-display text-3xl tracking-[-0.03em] text-cream sm:text-4xl">{title}</h3>
         </div>
-        <span className="mb-1 inline-flex shrink-0 items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-stone-page backdrop-blur-sm transition duration-300 group-hover:border-copper group-hover:bg-copper">
+        <span className="mb-1 inline-flex shrink-0 items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-cream backdrop-blur-sm transition duration-300 group-hover:border-copper group-hover:bg-copper group-hover:text-stone-page">
           View project
         </span>
       </div>
