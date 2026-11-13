@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { nav, studio } from "@/content/site";
+import { nav } from "@/content/site";
 import Button from "./Button";
 import Container from "./Container";
+import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
 
 export default function SiteHeader() {
@@ -74,12 +75,13 @@ export default function SiteHeader() {
       <Container className="flex h-16 items-center justify-between md:h-[72px]">
         <a
           href="#top"
-          className="font-display text-2xl tracking-[-0.03em] text-ink"
+          aria-label="Aurelia Atelier"
+          className="text-ink transition duration-300 hover:text-copper"
         >
-          {studio.name}
+          <Logo />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 lg:gap-8 md:flex" aria-label="Primary">
           {nav.map((item) => (
             <a
               key={item.href}

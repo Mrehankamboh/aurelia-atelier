@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { footer, services, studio } from "@/content/site";
 import Container from "./Container";
+import Logo from "./Logo";
 
 const linkClass =
   "text-sm text-footer-muted transition duration-300 hover:text-cream focus-visible:outline-cream";
@@ -103,9 +104,10 @@ export default function SiteFooter() {
           <div className="sm:col-span-2 lg:col-span-4">
             <a
               href="#top"
-              className="font-display text-4xl tracking-[-0.03em] text-cream transition duration-300 hover:text-copper"
+              aria-label="Aurelia Atelier"
+              className="inline-flex text-cream transition duration-300 hover:text-copper"
             >
-              {studio.name}
+              <Logo size="footer" />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">{footer.intro}</p>
           </div>

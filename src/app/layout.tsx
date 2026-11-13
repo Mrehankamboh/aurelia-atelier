@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
 import Script from "next/script";
+import RefreshMotion from "@/components/RefreshMotion";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Script id="theme-flag" strategy="beforeInteractive">
           {`document.documentElement.classList.add("js");try{var t=localStorage.getItem("aurelia-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}if(t==="dark")document.documentElement.classList.add("dark");}catch(e){}`}
         </Script>
+        <RefreshMotion />
         {children}
       </body>
     </html>

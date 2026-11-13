@@ -92,8 +92,71 @@ body {
   }
 }
 
-.rise {
-  animation: rise 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+.rise,
+.js.is-booted .load-in {
+  animation: rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.js .load-in {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+@keyframes line-in {
+  from {
+    opacity: 0;
+    transform: translateX(-0.7em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.js .load-line {
+  opacity: 0;
+  transform: translateX(-0.7em);
+}
+
+.js.is-booted .load-line {
+  animation: line-in 860ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.refresh-split {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  pointer-events: none;
+}
+
+.refresh-panel {
+  width: 50%;
+  height: 100%;
+  background: var(--stone-page);
+}
+
+.refresh-panel-left {
+  border-right: 1px solid color-mix(in srgb, var(--copper) 50%, transparent);
+  transform: translateX(-100%);
+}
+
+.refresh-panel-right {
+  transform: translateX(100%);
+}
+
+.js .refresh-panel-left,
+.js .refresh-panel-right {
+  transform: translateX(0);
+  transition: transform 980ms cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.js.is-booted .refresh-panel-left {
+  transform: translateX(-100%);
+}
+
+.js.is-booted .refresh-panel-right {
+  transform: translateX(100%);
 }
 
 @keyframes hero-drift {
@@ -209,8 +272,25 @@ body {
     scroll-behavior: auto;
   }
 
-  .rise {
-    animation: none;
+  .js .load-in,
+  .js.is-booted .load-in,
+  .js .load-line,
+  .js.is-booted .load-line {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .js .refresh-panel-left,
+  .js.is-booted .refresh-panel-left {
+    transform: translateX(-100%) !important;
+    transition: none !important;
+  }
+
+  .js .refresh-panel-right,
+  .js.is-booted .refresh-panel-right {
+    transform: translateX(100%) !important;
+    transition: none !important;
   }
 
   .js .reveal {
