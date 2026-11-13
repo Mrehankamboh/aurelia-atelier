@@ -12,7 +12,7 @@ export default function ProjectCard({ id, title, category, place, className = ""
   return (
     <a
       href="#contact"
-      className={`group relative flex h-full flex-col justify-end overflow-hidden rounded-[28px] bg-[#161311] focus-visible:ring-2 focus-visible:ring-ink ${className}`}
+      className={`group relative flex h-full flex-col justify-end overflow-hidden rounded-[28px] border border-white/10 bg-[#161311] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition duration-300 hover:border-copper/50 focus-visible:ring-2 focus-visible:ring-cream/80 ${className}`}
     >
       <div className="absolute inset-0 transition duration-700 ease-out group-hover:scale-105">
         <ProjectArt id={id} />
